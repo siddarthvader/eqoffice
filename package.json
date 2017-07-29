@@ -1,0 +1,12 @@
+{
+  "name": "eqoffice",
+  "version": "1.0.0",
+  "description": "EQ offices",
+  "main": "index.js",
+  "repository": "git",
+  "author": "siddharth",
+  "license": "MIT",
+  "dependencies": {
+    "skeleton": "^0.1.2"
+  }
+}
