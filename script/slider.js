@@ -121,7 +121,7 @@
                 // so that index does not bound
                 index = (this._active + 1) % 5;
                 this.changedTo(null, index);
-            }, 1500);
+            }, 4500);
         };
         this.append = () => {
             // append just once instead of five times to save of performance
@@ -139,12 +139,12 @@
         Slider.init(i);
     }
 
-     // append the yield to DOM 
+    // append the yield to DOM 
     Slider.append();
 
     // kickstart timeer
     Slider.timer();
-    
+
     console.log(Slider);
 
 

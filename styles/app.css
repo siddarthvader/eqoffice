@@ -114,15 +114,18 @@ body {
 
 .home-container .slider-wrapper {
   position: relative;
+  overflow-x: hidden;
 }
 
 .home-container .slider-wrapper .slider-main .image-wrapper > img {
-  position: absolute;
+  display: inline-block;
   transition: 300ms ease-in;
   opacity: 1;
 }
 
 .home-container .slider-wrapper .slider-main .image-wrapper > img.hide {
+  position: absolute;
+  right: -999px;
   opacity: 0;
 }
 
@@ -152,6 +155,31 @@ body {
 .home-container .slider-wrapper .slider-main .indicators .bullets > li.fill {
   border: solid 1px red;
   background: #f2efea;
+}
+
+.home-container .why-eq {
+  padding: 2rem 1rem;
+}
+
+.home-container .why-eq .why-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-container .why-eq .why-column .title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.home-container .why-eq .why-column .content {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.home-container .whats-included {
+  padding: 2rem 1rem;
+  font-size: 1.5rem;
 }
 
 .text-center {
