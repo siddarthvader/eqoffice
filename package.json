@@ -6,6 +6,9 @@
   "repository": "git",
   "author": "siddharth",
   "license": "MIT",
+  "scripts":{
+    "start":"python -m SimpleHTTPServer 8000"
+  },
   "dependencies": {
     "skeleton": "^0.1.2"
   }
