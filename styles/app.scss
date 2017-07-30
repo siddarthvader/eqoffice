@@ -100,6 +100,48 @@ body {
     }
 }
 
+.home-container {
+    .slider-wrapper {
+        position: relative;
+        .slider-main {
+            .image-wrapper {
+                >img {
+                    position:absolute;
+                    transition:300ms ease-in;
+                    opacity:1;
+                    &.hide {
+                        opacity:0;
+                    }
+                }
+            }
+            .indicators {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                .bullets {
+                    width: 10%;
+                    margin: 1rem auto;
+                    >li {
+                        display: inline-block;
+                        border: 1px solid white;
+                        height: 12px;
+                        width: 12px;
+                        border-radius: 8px;
+                        cursor: pointer;
+                        margin: 1px;
+                        transition:300ms ease-in;
+                        background:transparent;
+                        &.fill {
+                            border:solid 1px red;
+                            background: #f2efea;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 // utility classes
 .text-center {
     text-align: center;
