@@ -103,14 +103,17 @@ body {
 .home-container {
     .slider-wrapper {
         position: relative;
+        overflow-x: hidden;
         .slider-main {
             .image-wrapper {
                 >img {
-                    position:absolute;
-                    transition:300ms ease-in;
-                    opacity:1;
+                    display: inline-block;
+                    transition: 300ms ease-in;
+                    opacity: 1;
                     &.hide {
-                        opacity:0;
+                        position: absolute;
+                        right: -999px;
+                        opacity: 0;
                     }
                 }
             }
@@ -129,16 +132,37 @@ body {
                         border-radius: 8px;
                         cursor: pointer;
                         margin: 1px;
-                        transition:300ms ease-in;
-                        background:transparent;
+                        transition: 300ms ease-in;
+                        background: transparent;
                         &.fill {
-                            border:solid 1px red;
+                            border: solid 1px red;
                             background: #f2efea;
                         }
                     }
                 }
             }
         }
+    }
+    .why-eq {
+        padding: 2rem 1rem;
+        .why-column {
+            display: flex;
+            flex-direction: column;
+            .title {
+                text-align: center;
+                font-weight: 600;
+                font-size: 2rem;
+            }
+            .content {
+                text-align: center;
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .whats-included {
+        padding: 2rem 1rem;
+        font-size:1.5rem;
+
     }
 }
 
