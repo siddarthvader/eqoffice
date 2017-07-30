@@ -110,6 +110,9 @@ body {
                     display: inline-block;
                     transition: 300ms ease-in;
                     opacity: 1;
+                    position:relative;
+                    left:0;
+                    top:0;
                     &.hide {
                         position: absolute;
                         right: -999px;
