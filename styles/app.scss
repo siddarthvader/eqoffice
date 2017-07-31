@@ -1,6 +1,12 @@
+@font-face {
+    font-family: 'urkelian';
+    src: url('./../static/fonts/Armata/armata/Armata-Regular.ttf')
+}
+
 * {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     color: black;
+    font-family: urkelian;
 }
 
 body {
@@ -9,15 +15,23 @@ body {
     padding-top: 16rem;
 }
 
+.no-padding {
+    padding: 0;
+}
+
 .img-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: rgba(128, 128, 128, 0.4);
     width: 100%;
     height: 100%;
     margin: 0;
+    @extend .bg-grey;
+}
+
+.bg-grey {
+    background: rgba(128, 128, 128, 0.4);
 }
 
 .sticky {
@@ -110,9 +124,9 @@ body {
                     display: inline-block;
                     transition: 300ms ease-in;
                     opacity: 1;
-                    position:relative;
-                    left:0;
-                    top:0;
+                    position: relative;
+                    left: 0;
+                    top: 0;
                     &.hide {
                         position: absolute;
                         right: -999px;
@@ -129,7 +143,7 @@ body {
                     margin: 1rem auto;
                     >li {
                         display: inline-block;
-                        border: 1px solid white;
+                        border: solid 1px red;
                         height: 12px;
                         width: 12px;
                         border-radius: 8px;
@@ -139,11 +153,18 @@ body {
                         background: transparent;
                         &.fill {
                             border: solid 1px red;
-                            background: #f2efea;
+                            background: red;
                         }
                     }
                 }
             }
+        }
+    }
+    .sub-heading {
+        padding: 2rem 1rem;
+        .content {
+            text-align: center;
+            font-size: 1.5rem;
         }
     }
     .why-eq {
@@ -164,8 +185,15 @@ body {
     }
     .whats-included {
         padding: 2rem 1rem;
-        font-size:1.5rem;
-
+        font-size: 1.5rem;
+        ul {
+            list-style: none;
+            li {
+                i {
+                    margin-right: .5rem;
+                }
+            }
+        }
     }
 }
 

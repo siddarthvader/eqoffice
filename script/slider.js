@@ -1,5 +1,4 @@
 (function () {
-    console.log('loaded');
 
     // path of img folder
     const PATH = '../static/image/';
@@ -145,7 +144,6 @@
     // kickstart timeer
     Slider.timer();
 
-    console.log(Slider);
 
 
 })()
