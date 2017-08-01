@@ -139,8 +139,9 @@ body {
                 top: 0;
                 width: 100%;
                 .bullets {
-                    width: 10%;
+                    width: 20%;
                     margin: 1rem auto;
+                    text-align: center;
                     >li {
                         display: inline-block;
                         border: solid 1px red;
@@ -166,6 +167,11 @@ body {
             text-align: center;
             font-size: 1.5rem;
         }
+    }
+    .map-container {
+        height: 400px;
+        width: 100%;
+        background: url(../static/image/map.png);
     }
     .why-eq {
         padding: 2rem 1rem;
