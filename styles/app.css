@@ -131,6 +131,11 @@ body {
   padding: 2rem 1rem;
 }
 
+.contact-container .contact-form .heading {
+  font-size: 1.5rem;
+  margin-bottom: .75rem;
+}
+
 .home-container .slider-wrapper {
   position: relative;
   overflow-x: hidden;
@@ -262,7 +267,7 @@ footer .copyright {
   width: 80%;
 }
 
-.text-center {
+.text-center, .contact-container .contact-form .heading {
   text-align: center;
 }
 
