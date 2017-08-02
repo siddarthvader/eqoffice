@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'urkelian';
     src: url('/static/fonts/Armata/armata/Armata-Regular.ttf')
@@ -13,7 +14,6 @@ body {
     margin: 0;
     font-size: 1rem;
     padding-top: 18rem;
-    
 }
 
 .no-padding {
@@ -210,7 +210,7 @@ body {
 }
 
 footer {
-    padding: 1rem 3rem;
+    padding: 2rem 1rem;
     bottom: 0;
     left: 0;
     background: black;
@@ -218,7 +218,7 @@ footer {
     .main-footer {
         height: 70%;
         img {
-            width: 10%;
+            width: 8%;
             filter: invert(100%);
         }
         .enquiry {
@@ -233,8 +233,8 @@ footer {
         text-align: center;
         font-size: 1rem;
         color: #d1d1d1;
-        margin:0 auto;
-        width:80%;
+        margin: 0 auto;
+        width: 80%;
     }
 }
 
