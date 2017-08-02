@@ -1,20 +1,23 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="../styles/skeleton.css">
-    <link rel="stylesheet" href="../styles/app.min.css">
-    <link rel="stylesheet" href="../styles/font-awesome/css/font-awesome.min.css">
+    <base href="/">
+    <link rel="stylesheet" href="/styles/skeleton.css">
+    <link rel="stylesheet" href="/styles/app.min.css">
+    <link rel="stylesheet" href="/styles/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link href="https://cdn.mapkit.io/v1/infobox.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="top-bar">
         <nav class="nav-bar">
             <div class="nav-menu container">
-                <div class="nav-item"><a href="./">Home</a></div>
+                <div class="nav-item"><a href="/home">Home</a></div>
                 <!-- <div class="nav-item"><a href="#">Virtual Offices in London</a></div>
                 <div class="nav-item"><a href="#">Meeting Rooms in London</a></div>
                 <div class="nav-item"><a href="#">Locations</a></div> -->
-                <div class="nav-item"><a href="../contact/">Contact</a></div>
+                <div class="nav-item"><a href="/contact/">Contact</a></div>
             </div>
         </nav>
         <header class="info-bar">
@@ -66,7 +69,8 @@
             </p>
 
         </div>
-        <div class="map-container">
+        <div class="map-container" id='map'>
+
         </div>
 
         <div class="why-eq container">
@@ -179,7 +183,12 @@
             </div>
         </div>
     </div>
-    <script src="../script/slider.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&extension=.js"></script>
+    <script src="https://cdn.mapkit.io/v1/infobox.js"></script>
+    <script src="script/slider.js"></script>
+    <script src="script/map.js">
+    </script>
+
 </body>
 
 </html>
