@@ -21,13 +21,15 @@
         </nav>
         <header class="info-bar">
             <div class="container info-bar-content row">
-                <img src="/static/image/logo.png" class="three columns" alt="logo">
-                <div class="enquiry nine columns">
+                <img src="/static/image/logo.png" class="u-pull-left" alt="logo">
+                <div class="enquiry u-pull-right">
                     <div>
-                        (416) 646-7323
+                        <a href="tel:(416) 646-7323">(416) 646-7323</a>
                     </div>
                     <div>
+                        <a href="mailto:'info@eqoffices.com'">             
                         info@eqoffices.com
+                        </a>
                     </div>
                 </div>
             </div>
@@ -65,19 +67,19 @@
         <form class="contact-form container">
             <div class="row">
                 <div class="six columns">
-                    <input class="u-full-width" type="text" placeholder="First Name (required)" id="firstName" required>
+                    <input class="u-full-width" type="text" placeholder="First Name (*required)" id="firstName" required>
                 </div>
                 <div class="six columns">
-                    <input class="u-full-width" type="text" placeholder="Last Name (required)" id="lastName" required>
+                    <input class="u-full-width" type="text" placeholder="Last Name (*required)" id="lastName" required>
                 </div>
             </div>
             <div class="row">
                 <div class="six columns">
 
-                    <input class="u-full-width" type="email" placeholder="Email ID (required)" id="email">
+                    <input class="u-full-width" type="email" placeholder="Email ID (*required)" id="email">
                 </div>
                 <div class="six columns">
-                    <input class="u-full-width" type="text" placeholder="Phone Number (required)" id="email">
+                    <input class="u-full-width" type="text" placeholder="Phone Number (*required)" id="email">
                 </div>
             </div>
             <div class="row">
@@ -92,7 +94,7 @@
                 <div class="six columns flex col justify-end">
                     <label class="schedule-a-tour">
                         <input type="checkbox">
-                        <span class="label-body medium-text">Would you like to schedule a tour?</span>
+                        <span class="label-body medium-text">Would you like to schedule a tour? (*required)</span>
                     </label>
                 </div>
             </div>
@@ -103,6 +105,26 @@
             </div>
         </form>
     </div>
+
+
+    <footer>
+        <div class="main-footer">
+            <img src="/static/image/logo.png" class="u-pull-left" alt="logo">
+            <div class="enquiry u-pull-right">
+                <div>
+                    <a href="tel:(416) 646-7323">(416) 646-7323</a>
+                </div>
+                <div>
+                    <a href="mailto:'info@eqoffices.com'">             
+                        info@eqoffices.com
+                        </a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright reserved @ 2017 EQ Offices Company
+        </div>
+    </footer>
     <script src="https://maps.googleapis.com/maps/api/js?key=&extension=.js"></script>
     <script src="https://cdn.mapkit.io/v1/infobox.js"></script>
     <script src="script/map.js">
