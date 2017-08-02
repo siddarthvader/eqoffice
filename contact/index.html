@@ -1,20 +1,22 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="../styles/skeleton.css">
-    <link rel="stylesheet" href="../styles/app.min.css">
-    <link rel="stylesheet" href="../styles/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/styles/skeleton.css">
+    <link rel="stylesheet" href="/styles/app.min.css">
+    <link rel="stylesheet" href="/styles/font-awesome/css/font-awesome.min.css">
+
+    <base href="/">
 </head>
 
 <body>
     <div class="top-bar">
         <nav class="nav-bar">
             <div class="nav-menu container">
-                <div class="nav-item"><a href="../home/">Home</a></div>
+                <div class="nav-item"><a href="/home/">Home</a></div>
                 <!-- <div class="nav-item"><a href="#">Virtual Offices in London</a></div>
                 <div class="nav-item"><a href="#">Meeting Rooms in London</a></div>
                 <div class="nav-item"><a href="#">Locations</a></div> -->
-                <div class="nav-item"><a href="./">Contact</a></div>
+                <div class="nav-item"><a href="/contact/">Contact</a></div>
             </div>
         </nav>
         <header class="info-bar">
@@ -56,27 +58,26 @@
                         MSH 2S6, Canada
                     </p>
                 </div>
-                <div class="map-image nine columns">
-                    <img src="../static/image/map.png" class="u-max-full-width" alt="Map">
+                <div class="map-image nine columns" id="map">
                 </div>
             </div>
         </div>
         <form class="contact-form container">
             <div class="row">
                 <div class="six columns">
-                    <input class="u-full-width" type="text" placeholder="First Name *" id="firstName" required>
+                    <input class="u-full-width" type="text" placeholder="First Name (required)" id="firstName" required>
                 </div>
                 <div class="six columns">
-                    <input class="u-full-width" type="text" placeholder="Last Name *" id="lastName" required>
+                    <input class="u-full-width" type="text" placeholder="Last Name (required)" id="lastName" required>
                 </div>
             </div>
             <div class="row">
                 <div class="six columns">
 
-                    <input class="u-full-width" type="email" placeholder="Email ID *" id="email">
+                    <input class="u-full-width" type="email" placeholder="Email ID (required)" id="email">
                 </div>
                 <div class="six columns">
-                    <input class="u-full-width" type="text" placeholder="Phone Number *" id="email">
+                    <input class="u-full-width" type="text" placeholder="Phone Number (required)" id="email">
                 </div>
             </div>
             <div class="row">
@@ -84,18 +85,14 @@
                     <input class="u-full-width" type="text" placeholder="Company" id="company">
                 </div>
             </div>
-            <div class="row">
+            <div class="row flex row">
                 <div class="six columns">
                     <textarea class="u-full-width" placeholder="Leave us a message.." id="exampleMessage"></textarea>
                 </div>
-                <div class="six columns">
+                <div class="six columns flex col justify-end">
                     <label class="schedule-a-tour">
                         <input type="checkbox">
-                        <span class="label-body">Would you like to schedule a tour?</span>
-                    </label>
-                    <label class="terms and condition">
-                        <input type="checkbox" required>
-                        <span class="label-body">Agree to terms and condition *</span>
+                        <span class="label-body medium-text">Would you like to schedule a tour?</span>
                     </label>
                 </div>
             </div>
@@ -106,6 +103,10 @@
             </div>
         </form>
     </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&extension=.js"></script>
+    <script src="https://cdn.mapkit.io/v1/infobox.js"></script>
+    <script src="script/map.js">
+    </script>
 </body>
 
 </html>

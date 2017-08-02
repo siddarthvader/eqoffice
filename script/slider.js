@@ -1,16 +1,30 @@
 (function () {
 
-    // path of img folder
-    const PATH = '../static/image/';
+    // slider configuration goes here
+    const imgObj = {
+        // path of image folder, currently it is at /static/image/
+        "PATH": "/static/image/",
 
-    // names of images
-    const imgObj = [
-        'slider_one.jpg',
-        'slider_two.jpg',
-        'slider_three.jpg',
-        'slider_four.jpg',
-        'slider_five.jpg'
-    ];
+        // names of image files, just add the name of images here and slider will show image with bullet point
+        "images": [
+            "slider_one.jpg",
+            "slider_two.jpg",
+            "slider_three.jpg",
+            "slider_four.jpg",
+            "slider_five.jpg",
+            "slider_one.jpg",
+            "slider_two.jpg",
+            "slider_three.jpg",
+            "slider_four.jpg",
+            "slider_five.jpg"
+        ],
+        // if you want slider to change automatically
+        "autoChange": true,
+        // duration between each change in miliseconds
+        "sliderDuration": 5000
+    }
+
+
 
     // main slider Object
     let sliderObj = function () {
@@ -47,7 +61,7 @@
             this.imgChild[index] = this.imgChildElement.cloneNode(false);
 
             // setting its src
-            this.imgChild[index].src = PATH + imgObj[index];
+            this.imgChild[index].src = imgObj.PATH + imgObj.images[index];
             // setting id, irrelevant 
             this.imgChild[index].setAttribute('id', `slider_${index}`);
 
@@ -120,7 +134,7 @@
                 // so that index does not bound
                 index = (this._active + 1) % 5;
                 this.changedTo(null, index);
-            }, 4500);
+            },imgObj.sliderDuration);
         };
         this.append = () => {
             // append just once instead of five times to save of performance
@@ -133,7 +147,7 @@
 
     // initiating slider here
     let Slider = new sliderObj();
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0, len = imgObj.images.length; i < len; i++) {
         //    attaching all images and bullets to DOM and object
         Slider.init(i);
     }
@@ -142,7 +156,9 @@
     Slider.append();
 
     // kickstart timeer
-    Slider.timer();
+    if (imgObj.autoChange) {
+        Slider.timer();
+    }
 
 
 
