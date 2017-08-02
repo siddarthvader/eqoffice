@@ -232,7 +232,7 @@ body {
 }
 
 footer {
-  padding: 1rem 3rem;
+  padding: 2rem 1rem;
   bottom: 0;
   left: 0;
   background: black;
@@ -244,7 +244,7 @@ footer .main-footer {
 }
 
 footer .main-footer img {
-  width: 10%;
+  width: 8%;
   filter: invert(100%);
 }
 
