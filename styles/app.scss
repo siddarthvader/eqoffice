@@ -13,6 +13,7 @@ body {
     margin: 0;
     font-size: 1rem;
     padding-top: 18rem;
+    
 }
 
 .no-padding {
@@ -80,9 +81,11 @@ body {
                 flex-direction: column;
                 font-size: 2rem;
                 padding-top: 1rem;
-                >div {
+                text-align: right;
+                a {
                     text-align: right;
                     color: #d1d1d1;
+                    text-decoration: none;
                 }
             }
         }
@@ -96,7 +99,7 @@ body {
         padding: 2rem 1rem;
     }
     .map-area {
-        background: #dfdfdf;
+        background: rgba(223, 223, 223, 0.7);
         padding: 2rem 1rem;
         >.container {
             padding: 2rem 1rem;
@@ -108,8 +111,8 @@ body {
                 margin-bottom: 1rem;
             }
         }
-        .map-image{
-            height:80%;
+        .map-image {
+            height: 50%;
         }
     }
     .contact-form {
@@ -125,7 +128,7 @@ body {
             .image-wrapper {
                 >img {
                     display: inline-block;
-                    transition: 600ms ease-in;
+                    transition: 1200ms ease-in;
                     opacity: 1;
                     position: relative;
                     left: 0;
@@ -153,7 +156,7 @@ body {
                         border-radius: 8px;
                         cursor: pointer;
                         margin: 1px;
-                        transition: 600ms ease-in;
+                        transition: 1200ms ease-in;
                         background: transparent;
                         &.fill {
                             border: solid 1px black;
@@ -197,7 +200,7 @@ body {
         ul {
             list-style: none;
             li {
-                padding:.3rem 0;
+                padding: .3rem 0;
                 i {
                     margin-right: .5rem;
                 }
@@ -206,22 +209,53 @@ body {
     }
 }
 
+footer {
+    padding: 1rem 3rem;
+    bottom: 0;
+    left: 0;
+    background: black;
+    height: 7rem;
+    .main-footer {
+        height: 70%;
+        img {
+            width: 10%;
+            filter: invert(100%);
+        }
+        .enquiry {
+            a {
+                font-size: 1.4rem;
+                text-decoration: none;
+                color: #d1d1d1;
+            }
+        }
+    }
+    .copyright {
+        text-align: center;
+        font-size: 1rem;
+        color: #d1d1d1;
+        margin:0 auto;
+        width:80%;
+    }
+}
+
 // utility classes
 .text-center {
     text-align: center;
 }
-.medium-text{
-    font-size:1.5rem;
+
+.medium-text {
+    font-size: 1.5rem;
 }
-.flex{
+
+.flex {
     display: flex;
-    &.row{
+    &.row {
         flex-direction: row;
     }
-    &.col{
+    &.col {
         flex-direction: column;
     }
-    &.justify-end{
+    &.justify-end {
         justify-content: flex-end;
     }
 }
