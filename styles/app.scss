@@ -13,7 +13,7 @@
 body {
     margin: 0;
     font-size: 1rem;
-    padding-top: 16rem;
+    padding-top: 14rem;
 }
 
 .no-padding {
@@ -45,7 +45,7 @@ body {
 .top-bar {
     width: 100%;
     @extend .sticky;
-    height: 16rem;
+    height: 12rem;
     z-index: 100;
     .nav-bar {
         background: black;
@@ -96,7 +96,6 @@ body {
     .contact-heading {
         text-align: center;
         margin-top: .5rem;
-        padding: 2rem 1rem;
     }
     .map-area {
         background: rgba(223, 223, 223, 0.7);
