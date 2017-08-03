@@ -7,9 +7,10 @@
 
         // names of image files, just add the name of images here and slider will show image with bullet point
         "images": [
+            "s4.jpg",
             "s1.jpg",
-            "s2.jpg",
             "s3.jpg",
+            "s2.jpg"
         ],
         // if you want slider to change automatically
         "autoChange": false,
