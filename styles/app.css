@@ -136,26 +136,29 @@ body {
 }
 
 .home-container .slider-wrapper {
-  position: relative;
   overflow: hidden;
+}
+
+.home-container .slider-wrapper .slider-main {
+  position: relative;
 }
 
 .home-container .slider-wrapper .slider-main .image-wrapper {
   height: 60rem;
+  display: flex;
+  position: relative;
 }
 
 .home-container .slider-wrapper .slider-main .image-wrapper > img {
   display: inline-block;
   transition: 1200ms ease-in;
   opacity: 1;
-  position: relative;
-  left: 0;
-  top: 0;
+  position: absolute;
+  left: 0%;
+  top: -20%;
 }
 
 .home-container .slider-wrapper .slider-main .image-wrapper > img.hide {
-  position: absolute;
-  right: -999px;
   opacity: 0;
 }
 
