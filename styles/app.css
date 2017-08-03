@@ -69,7 +69,7 @@ body {
 }
 
 .top-bar .nav-bar .nav-menu .nav-item a:hover {
-  color: #b1b1b1;
+  color: #676767;
 }
 
 .top-bar .info-bar {
@@ -95,7 +95,7 @@ body {
 
 .top-bar .info-bar .info-bar-content .enquiry a {
   text-align: right;
-  color: #b1b1b1;
+  color: #676767;
   text-decoration: none;
 }
 
@@ -255,13 +255,13 @@ footer .main-footer img {
 footer .main-footer .enquiry a {
   font-size: 1.4rem;
   text-decoration: none;
-  color: #b1b1b1;
+  color: #676767;
 }
 
 footer .copyright {
   text-align: center;
   font-size: 1rem;
-  color: #b1b1b1;
+  color: #676767;
   margin: 0 auto;
   width: 80%;
 }
