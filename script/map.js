@@ -131,7 +131,7 @@
     function init() {
         var mapOptions = {
             center: new google.maps.LatLng(43.6504424, -79.38126820000002),
-            zoom: 15,
+            zoom: 16,
             gestureHandling: 'cooperative',
             fullscreenControl: false,
             scrollwheel: false,
