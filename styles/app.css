@@ -12,7 +12,7 @@
 body {
   margin: 0;
   font-size: 1rem;
-  padding-top: 18rem;
+  padding-top: 16rem;
 }
 
 .no-padding {
@@ -77,11 +77,11 @@ body {
 }
 
 .top-bar .info-bar .info-bar-content {
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
 }
 
 .top-bar .info-bar .info-bar-content img {
-  width: 20%;
+  width: 18%;
 }
 
 .top-bar .info-bar .info-bar-content .enquiry {
