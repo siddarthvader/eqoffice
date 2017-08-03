@@ -130,10 +130,11 @@
 
     function init() {
         var mapOptions = {
-            center: new google.maps.LatLng(43.64559808993342, -79.37577503593752),
-            zoom: 14,
-            gestureHandling: 'auto',
+            center: new google.maps.LatLng(43.6504424, -79.38126820000002),
+            zoom: 15,
+            gestureHandling: 'cooperative',
             fullscreenControl: false,
+            scrollwheel: false,
             zoomControl: true,
             disableDoubleClickZoom: true,
             mapTypeControl: true,
@@ -141,7 +142,6 @@
                 style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
             },
             scaleControl: true,
-            scrollwheel: true,
             streetViewControl: true,
             draggable: true,
             clickableIcons: false,

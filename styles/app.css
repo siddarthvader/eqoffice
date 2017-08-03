@@ -69,7 +69,7 @@ body {
 }
 
 .top-bar .nav-bar .nav-menu .nav-item a:hover {
-  color: #d1d1d1;
+  color: #b1b1b1;
 }
 
 .top-bar .info-bar {
@@ -95,7 +95,7 @@ body {
 
 .top-bar .info-bar .info-bar-content .enquiry a {
   text-align: right;
-  color: #d1d1d1;
+  color: #b1b1b1;
   text-decoration: none;
 }
 
@@ -256,13 +256,13 @@ footer .main-footer img {
 footer .main-footer .enquiry a {
   font-size: 1.4rem;
   text-decoration: none;
-  color: #d1d1d1;
+  color: #b1b1b1;
 }
 
 footer .copyright {
   text-align: center;
   font-size: 1rem;
-  color: #d1d1d1;
+  color: #b1b1b1;
   margin: 0 auto;
   width: 80%;
 }
