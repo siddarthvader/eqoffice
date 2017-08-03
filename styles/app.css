@@ -137,7 +137,11 @@ body {
 
 .home-container .slider-wrapper {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
+}
+
+.home-container .slider-wrapper .slider-main .image-wrapper {
+  height: 60rem;
 }
 
 .home-container .slider-wrapper .slider-main .image-wrapper > img {

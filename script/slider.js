@@ -7,19 +7,12 @@
 
         // names of image files, just add the name of images here and slider will show image with bullet point
         "images": [
-            "slider_one.jpg",
-            "slider_two.jpg",
-            "slider_three.jpg",
-            "slider_four.jpg",
-            "slider_five.jpg",
-            "slider_one.jpg",
-            "slider_two.jpg",
-            "slider_three.jpg",
-            "slider_four.jpg",
-            "slider_five.jpg"
+            "s1.jpg",
+            "s2.jpg",
+            "s3.jpg",
         ],
         // if you want slider to change automatically
-        "autoChange": true,
+        "autoChange": false,
         // duration between each change in miliseconds
         "sliderDuration": 5000
     }
