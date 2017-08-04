@@ -13,7 +13,7 @@
             "s2.jpg"
         ],
         // if you want slider to change automatically
-        "autoChange": false,
+        "autoChange": true,
         // duration between each change in miliseconds
         "sliderDuration": 5000
     }
@@ -104,7 +104,7 @@
                 clearInterval(this.timeInterval);
 
             }
-            console.info('triggered');
+
             // take slider to destination
 
             // hiding the current active image
@@ -126,7 +126,7 @@
             let index;
             this.timeInterval = setInterval(() => {
                 // so that index does not bound
-                index = (this._active + 1) % 5;
+                index = (this._active + 1) % imgObj["images"].length;
                 this.changedTo(null, index);
             },imgObj.sliderDuration);
         };
