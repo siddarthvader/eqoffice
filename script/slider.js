@@ -101,7 +101,7 @@
             if (event) {
                 // will only be availble when manually clicked
                 // kill timer here
-                clearInterval(this.timeInterval);
+                // clearInterval(this.timeInterval);
 
             }
 
