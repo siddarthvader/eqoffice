@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="/styles/skeleton.css">
     <link rel="stylesheet" href="/styles/app.min.css">
     <link rel="stylesheet" href="/styles/font-awesome/css/font-awesome.min.css">
-
     <base href="/">
 </head>
 
@@ -65,7 +64,7 @@
                 </div>
             </div>
         </div>
-        <form class="contact-form container">
+        <form class="contact-form container" id="form" name="contact" method="post" onsubmit="formSubmit();event.preventDefault()">
             <div class="heading">
                 Please fill in contact details
             </div>
@@ -74,35 +73,34 @@
             </div>
             <div class="row">
                 <div class="six columns">
-                    <input class="u-full-width" type="text" placeholder="First Name *" id="firstName" required>
+                    <input class="u-full-width" type="text" name="firstname" placeholder="First Name *" id="firstName" required>
                 </div>
                 <div class="six columns">
-                    <input class="u-full-width" type="text" placeholder="Last Name *" id="lastName" required>
+                    <input class="u-full-width" type="text" name="lastname" placeholder="Last Name *" id="lastName" required>
                 </div>
             </div>
             <div class="row">
                 <div class="six columns">
-
-                    <input class="u-full-width" type="email" placeholder="Email ID *" id="email">
+                    <input class="u-full-width" type="email" name="email" placeholder="Email ID *" id="email">
                 </div>
                 <div class="six columns">
-                    <input class="u-full-width" type="text" placeholder="Phone Number *" id="email">
+                    <input class="u-full-width" type="text" name="phone" placeholder="Phone Number *" id="phone">
                 </div>
 
             </div>
             <div class="row">
                 <div class="six columns">
-                    <input class="u-full-width" type="text" placeholder="Company" id="company">
+                    <input class="u-full-width" type="text" name="company" placeholder="Company" id="company">
                 </div>
             </div>
             <div class="row flex row">
                 <div class="six columns">
-                    <textarea class="u-full-width" placeholder="Leave us a message.." id="exampleMessage"></textarea>
+                    <textarea class="u-full-width" name="message" placeholder="Leave us a message.." id="exampleMessage"></textarea>
                 </div>
                 <div class="six columns flex col justify-end">
                     <label class="schedule-a-tour">
-                        <input type="checkbox">
-                        <span class="label-body medium-text">Would you like to schedule a tour? </span>
+                        <input type="checkbox" name="wantToSchedule">
+                        <span class="label-body medium-text" >Would you like to schedule a tour? </span>
                     </label>
                 </div>
             </div>
@@ -138,6 +136,94 @@
     <script src="https://cdn.mapkit.io/v1/infobox.js"></script>
     <script src="script/map.js">
     </script>
+    <script type="text/javascript">
+        function formSubmit() {
+            var url = "contact/sendmail.php";
+            var form = document.querySelector('form');
+            var data = serialize(form);
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", url, true);
+
+            //Send the proper header information along with the request
+            xhr.setRequestHeader("Content-type", "application/json");
+
+            console.log(data);
+            xhr.send(JSON.stringify(data));
+            xhr.onreadystatechange = processRequest;
+
+            var processRequest = function (e) {
+                if (xhr.readyState == 4 && xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    console.log(response);
+                }
+            }
+
+        };
+
+        function serialize(form) {
+            if (!form || form.nodeName !== "FORM") {
+                return;
+            }
+            var i, j,
+                obj = {};
+            for (i = form.elements.length - 1; i >= 0; i = i - 1) {
+                if (form.elements[i].name === "") {
+                    continue;
+                }
+                switch (form.elements[i].nodeName) {
+                    case 'INPUT':
+                        switch (form.elements[i].type) {
+                            case 'text':
+                            case 'hidden':
+                            case 'password':
+                            case 'button':
+                            case 'reset':
+                            case 'submit':
+                            case 'email':
+                                obj[form.elements[i].name] = encodeURIComponent(form.elements[i].value);
+                                break;
+                            case 'checkbox':
+                            case 'radio':
+                                if (form.elements[i].checked) {
+                                    obj[form.elements[i].name] = encodeURIComponent(form.elements[i].value);
+                                }
+                                break;
+                            case 'file':
+                                break;
+                        }
+                        break;
+                    case 'TEXTAREA':
+                        obj[form.elements[i].name] = encodeURIComponent(form.elements[i].value);
+                        break;
+                    case 'SELECT':
+                        switch (form.elements[i].type) {
+                            case 'select-one':
+                                obj[form.elements[i].name] = encodeURIComponent(form.elements[i].value);
+                                break;
+                            case 'select-multiple':
+                                for (j = form.elements[i].options.length - 1; j >= 0; j = j - 1) {
+                                    if (form.elements[i].options[j].selected) {
+                                        obj[form.elements[i].name] = encodeURIComponent(form.elements[i].options[j].value);
+                                    }
+                                }
+                                break;
+                        }
+                        break;
+                    case 'BUTTON':
+                        switch (form.elements[i].type) {
+                            case 'reset':
+                            case 'submit':
+                            case 'button':
+                                obj[form.elements[i].name] = encodeURIComponent(form.elements[i].value);
+                                break;
+                        }
+                        break;
+                }
+            }
+            return obj;
+        }
+    </script>
+
 </body>
 
 </html>
